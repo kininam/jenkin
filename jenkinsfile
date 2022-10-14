@@ -9,7 +9,7 @@ pipeline{
     }
     parameters{
         string(name: 'BRANCH', defaultValue: 'master', description: 'Enter branch')
-        choice(name: 'OPERATION', choices: ['A', 'B', 'C'])
+        choice(name: "TEST_CHOICE", choices: ["production", "staging", "development"], description: "Sample multi-choice parameter")
     }
     stages{
         stage('Unit Testing'){
